@@ -15,7 +15,7 @@ Create, Read, Update, and Delete (CRUD) operations for colors in user accounts.
 
 ### 2. How do I set this up?
 
-Simply clone the entire git repository into your remote machine's default web root
+Clone the entire git repository into your remote machine's default web root
 directory. For Apache web servers, this is by default located in:
 
 ```bash
