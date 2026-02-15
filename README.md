@@ -15,12 +15,21 @@ Create, Read, Update, and Delete (CRUD) operations for colors in user accounts.
 
 ### 2. How do I set this up?
 
-Clone the entire git repository into your remote machine's default web root
-directory. For Apache web servers, this is by default located in:
+###### Creating directories
+Inside of ```/var/www/html```, create directories LAMPAPI, css, and js
 
-```bash
-/var/www/html
-```
+###### Adding COLORS Lab APIs
+Place all files in the remote repository directory ```https://github.com/redlyoe/COLORSLab/tree/main/api```
+into ```/var/www/html/LAMPAPI```
+
+###### Handling visuals and client side logic
+Of the files inside of ```https://github.com/redlyoe/COLORSLab/tree/main/public```, place:
+- html files inside of ```/var/www/html/```
+- js files inside of ```/var/www/html/js```
+- css files inside of ```/var/www/html/css```
+
+Refresh the page with ctrl + shift + r or clear browser cache to ensure changes are visible
+on your browser!
 
 ### 3. How to run and access this application
 
