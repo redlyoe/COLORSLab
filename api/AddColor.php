@@ -4,11 +4,11 @@
 	$color = $inData["color"];
 	$userId = $inData["userId"];
 
-	$conn = new mysqli("localhost", "TheBeast", "WeLoveCOP4331", "COP4331");
+	$conn = new mysqli("localhost", "MYSQLUSERNAME", "MYSQLPASSWORD", "DBNAME");
 	if ($conn->connect_error) 
 	{
 		returnWithError( $conn->connect_error );
-	} 
+	}
 	else
 	{
 		$stmt = $conn->prepare("INSERT into Colors (UserId,Name) VALUES(?,?)");
