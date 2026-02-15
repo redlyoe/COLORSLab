@@ -79,6 +79,8 @@ requirements, ui ergonomics, response time requirements and more.
 
 ###### AI Disclosure
 Tools: ChatGPT-5
+
 Scope: Understanding of git and github commands and conventions.
+
 Use: Used AI to aid in reversing commits, branch hygiene, and understand the purpose of certain files
 found typically in git repositories.
