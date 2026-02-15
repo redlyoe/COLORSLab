@@ -19,7 +19,8 @@ Create, Read, Update, and Delete (CRUD) operations for colors in user accounts.
 Inside of ```/var/www/html```, create directories LAMPAPI, css, and js
 
 ###### Adding COLORS Lab APIs
-Place all files in the remote repository directory ```https://github.com/redlyoe/COLORSLab/tree/main/api```
+Place all files in the remote repository directory 
+```https://github.com/redlyoe/COLORSLab/tree/main/api```
 into ```/var/www/html/LAMPAPI```
 
 ###### Handling visuals and client side logic
