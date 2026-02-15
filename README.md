@@ -29,6 +29,16 @@ Of the files inside of ```https://github.com/redlyoe/COLORSLab/tree/main/public`
 - js files inside of ```/var/www/html/js```
 - css files inside of ```/var/www/html/css```
 
+###### Finalizing APIs
+For each of the .php files in the LAMPAPI directory, change the parameters of
+```php
+$conn = new mysqli("localhost", "MYSQLUSERNAME", "MYSQLPASSWORD", "DBNAME");
+```
+- MYSQLUSERNAME -> Your MySQL username
+- MYSQLPASSWORD -> Your MySQL password
+- DBNAME -> The name of the database to be queried.
+to the proper mysql user credentials of your COLORS lab database
+
 Refresh the page with ctrl + shift + r or clear browser cache to ensure changes are visible
 on your browser!
 
