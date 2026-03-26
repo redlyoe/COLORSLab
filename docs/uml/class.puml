@@ -1,0 +1,32 @@
+@startuml
+class LoginPage {
+    - login
+    - password
+    + doLogin()
+    + saveCookie()
+}
+
+class ColorsPage {
+    - userId
+    - newColor
+    - srch
+    + addColor()
+    + searchColor()
+    + doLogout()
+}
+
+class Users {
+    - firstname
+    - lastname
+    - login
+    - password
+}
+
+class Colors {
+    - name
+}
+
+LoginPage --> Users : validates
+ColorsPage --> Users : acts on
+ColorsPage --> Colors : manages
+@enduml

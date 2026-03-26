@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+
+actor User
+
+(Login) as login
+(Search Colors) as searchcolors
+(Create Colors) as createcolors
+(Logout) as logout
+
+User --> login
+
+rectangle "COLORS Lab Web App" {
+    User --> searchcolors
+    User --> createcolors
+    User --> logout
+}
+
+@enduml

@@ -1,0 +1,26 @@
+@startuml
+start
+
+repeat
+- Display login page
+- Prompt user credentials
+- API requests database if user credentials match
+repeat while (Valid credentials?) is (no) not (yes)
+
+repeat
+- "Prompt search, create, and logout in COLORS page"
+
+split
+- "User enters search term"
+- "API returns JSON of partial matches"
+
+split again
+- "User creates color"
+- "Prompt user for color name"
+- "API adds color to database"
+
+end split
+repeat while (Logout) is (no) not (yes)
+
+stop
+@enduml
