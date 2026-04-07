@@ -2,22 +2,32 @@ name: Lint and Deploy to DigitalOcean
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - github-actions
+  workflow_dispatch:
 
 jobs:
   lint:
-    name: Lint HTML & PHP
+    name: Lint HTML, PHP & JS
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
 
-      # Lint PHP files
+      # Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Set up PHP
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
 
+      # Lint PHP files
       - name: Lint PHP files
         run: find . -name "*.php" -exec php -l {} \;
 
@@ -27,6 +37,13 @@ jobs:
 
       - name: Lint HTML files
         run: find . -name "*.html" -exec htmlhint {} \;
+
+      # Lint JS files
+      - name: Install ESLint
+        run: npm install -g eslint
+
+      - name: Lint JS files
+        run: find . -name "*.js" -exec eslint {} \;
 
   deploy:
     name: Deploy to Droplet
@@ -51,4 +68,12 @@ jobs:
       #     script: |
       #       cd /var/www/html
       #       git pull origin main
+      #       sudo systemctl reload apache2
+      #       cd /var/www/html
+      #       git pull origin main
+      #       # Install Node.js if not already installed
+      #       if ! command -v node &> /dev/null; then
+      #         curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+      #         sudo apt-get install -y nodejs
+      #       fi
       #       sudo systemctl reload apache2
