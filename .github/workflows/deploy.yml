@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - assignment-5-test
       - github-actions
   workflow_dispatch:
 
