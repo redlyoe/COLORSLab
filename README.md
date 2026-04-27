@@ -84,3 +84,11 @@ Scope: Understanding of git and github commands and conventions.
 
 Use: Used AI to aid in reversing commits, branch hygiene, and understand the purpose of certain files
 found typically in git repositories.
+
+Tools: Claude Sonnet 4.6
+
+Scope: Creating Unit Tests and understanding Jest
+
+Use: Created unit tests specifically for situations where I do not currently have a server (it is currently
+hosting the Large Project), thus it created two functions for frontend functions and a public API to test both,
+though they are unrelated to the project.
